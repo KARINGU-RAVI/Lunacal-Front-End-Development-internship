@@ -1,0 +1,161 @@
+/* Global styles */
+body {
+  background-color: #1a1c1f;
+  color: #ffffff;
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.main-container {
+  display: flex;
+  padding: 10px;
+  margin: auto;
+  width: 90%;
+  height: 90%;
+  background-color: #a5b4cb;
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+/* Left box styles */
+.left-box {
+  border-radius: 15px;
+  padding: 20px;
+  flex: 1;
+  background-color: #747679;
+  border-right: 1px solid #444a52;
+}
+
+/* Right widgets container */
+.right-widgets {
+  flex: 2;
+  display: flex;
+  flex-direction: column;
+  padding: 20px;
+}
+
+/* Tabs styles */
+.tabs-container {
+  background-color: #2c2f34;
+  border-radius: 10px;
+  padding: 20px;
+  margin-bottom: 20px;
+}
+
+.tabs {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 20px;
+}
+
+.tab {
+  background-color: #33373e;
+  border: none;
+  padding: 10px 20px;
+  color: #ffffff;
+  cursor: pointer;
+  border-radius: 5px;
+  flex: 1;
+  margin: 0 5px;
+  text-align: center;
+}
+
+.tab.active {
+  background-color: #444a52;
+}
+
+.tab-content {
+  background-color: #33373e;
+  border-radius: 10px;
+  padding: 15px;
+}
+
+/* Gallery styles */
+.gallery-container {
+  background-color: #2c2f34;
+  border-radius: 10px;
+  padding: 20px;
+}
+
+.gallery-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.controls {
+  display: flex;
+  align-items: center;
+}
+
+.add-image-btn {
+  background-color: #444a52;
+  border: none;
+  padding: 10px 20px;
+  color: #ffffff;
+  border-radius: 5px;
+  cursor: pointer;
+  margin-right: 10px;
+}
+
+.nav-btn {
+  background-color: transparent;
+  border: none;
+  color: #ffffff;
+  font-size: 24px;
+  cursor: pointer;
+  outline: none;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: 1;
+}
+
+.left-btn {
+  left: 10px;
+}
+
+.right-btn {
+  right: 10px;
+}
+
+.gallery-display {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  position: relative;
+}
+
+.gallery-item {
+  width: 30%;
+  height: 150px;
+  background-color: #444a52;
+  border-radius: 10px;
+  overflow: hidden;
+  display: flex;
+  margin: 1px;
+  align-items: center;
+  justify-content: center;
+  transition: transform 0.3s ease;
+}
+
+.gallery-image {
+ width: 100%;
+  max-height: 100%;
+  object-fit: cover;
+  filter: grayscale(100%);
+  transition: filter 0.3s ease, transform 0.3s ease;
+}
+
+.gallery-item:hover .gallery-image {
+  filter: grayscale(0%);
+  transform: scale(1.1);
+ 
+}
